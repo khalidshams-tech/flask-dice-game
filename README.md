@@ -38,7 +38,7 @@ This project is a beginner-friendly web game built with Flask. The app lets the 
 ## Project Structure
 
 ```text
-Dice-Game/
+flask-dice-game/
 +-- README.md
 +-- requirements.txt
 +-- project/
@@ -53,13 +53,13 @@ Dice-Game/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/khalidshams-tech/Dice-Game.git
+git clone https://github.com/khalidshams-tech/flask-dice-game.git
 ```
 
 2. Open the project folder:
 
 ```bash
-cd Dice-Game
+cd flask-dice-game
 ```
 
 3. Create and activate a virtual environment:
@@ -118,7 +118,6 @@ Example:
 
 ## Future Improvements
 
-- Rename the repository to `flask-dice-game` for a more professional portfolio name
 - Move or rename folders with spaces, such as `Video Test`
 - Add screenshots and a short demo video
 - Add tests for the dice rules
