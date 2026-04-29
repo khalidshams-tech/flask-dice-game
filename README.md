@@ -1,51 +1,130 @@
-<!-- Top-level README moved from project/README.md -->
-# Dice Game — Web (Flask)
+# Flask Dice Game
 
-A minimal Flask web UI for the Dice Game.
+A small Flask web application that lets a user play a simple dice game in the browser while practicing Python web development, session state, and project organization.
 
-What the project is
-- A small browser game that accepts a die total (2–12) or uses a server-generated random roll. State is stored in the session so you can play a short round.
+## Project Description
 
-How it works (brief)
-- Turn 1: roll 2,3,12 → lose; 7,11 → win; otherwise that roll becomes your point and the game continues.
-- Turns 2+: roll 7 → lose; roll equal to your point → win; otherwise continue (turn increments).
+This project is a beginner-friendly web game built with Flask. The app lets the player roll dice, tracks the current round using a server-side session, and applies basic win/loss rules. It is useful as a portfolio project because it shows a complete small web app with routes, templates, requirements, and game logic.
 
-How to run
-1. Install dependencies:
-```bash
-python3 -m pip install -r project/requirements.txt
+## Technologies Used
+
+- Python 3
+- Flask
+- HTML
+- CSS
+- Jinja templates
+- Browser sessions
+
+## Features
+
+- Start a new dice game
+- Enter or generate a dice roll
+- Track the player's point after the first roll
+- Continue rolling until a win or loss condition is reached
+- Store game state during the session
+- Simple web interface for practicing Flask basics
+
+## Game Rules
+
+- On the first turn:
+  - Rolling 2, 3, or 12 loses
+  - Rolling 7 or 11 wins
+  - Any other roll becomes the player's point
+- On later turns:
+  - Rolling 7 loses
+  - Rolling the point wins
+  - Any other roll continues the game
+
+## Project Structure
+
+```text
+Dice-Game/
++-- README.md
++-- requirements.txt
++-- project/
+    +-- app.py
+    +-- games/
+    +-- templates/
+    +-- static/
 ```
-2. Start the app:
+
+## Installation and Setup
+
+1. Clone the repository:
+
 ```bash
-python3 project/app.py
+git clone https://github.com/khalidshams-tech/Dice-Game.git
 ```
-3. Open `http://127.0.0.1:5000` in your browser.
 
-Files
-- `project/app.py` — Flask app
-- `project/games/dice_game.py` — game logic
-- `project/templates/dice.html` — UI template
+2. Open the project folder:
 
-That's all — use "Start New Game" in the UI to reset and play again.
+```bash
+cd Dice-Game
+```
 
-File structure
-------------
-The main files for this Flask app are:
+3. Create and activate a virtual environment:
 
-- `project/app.py` — Flask application and route handlers.
-- `project/games/dice_game.py` — game logic, validation, and state helpers.
-- `project/templates/dice.html` — Jinja2 template for the web UI.
-- `project/requirements.txt` — Python dependencies (Flask).
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-Use this as a quick reference when exploring the code.
+On macOS/Linux:
 
-Flask file structure
---------------------
-project/
-├── app.py                 # Flask application and route handlers
-├── games/
-│   ├── __init__.py        # package exports for the games module
-│   └── dice_game.py       # game logic, validation, and state helpers
-├── templates/
-│   └── dice.html          # Jinja2 template for the web UI
-└── requirements.txt       # Python dependencies (Flask)
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+4. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+5. Run the app:
+
+```bash
+python project/app.py
+```
+
+6. Open the app in a browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+## Screenshots
+
+Add screenshots here showing:
+
+- Start game screen
+- Dice roll screen
+- Win/loss result screen
+
+Example:
+
+```markdown
+![Dice Game screen](project/static/screenshots/dice-game.png)
+```
+
+## What I Learned
+
+- How to build a small Flask application
+- How to use routes and templates
+- How to store temporary game state in a session
+- How to organize game logic separately from web display code
+- How to document setup steps for another user
+
+## Future Improvements
+
+- Rename the repository to `flask-dice-game` for a more professional portfolio name
+- Move or rename folders with spaces, such as `Video Test`
+- Add screenshots and a short demo video
+- Add tests for the dice rules
+- Improve styling and mobile layout
+- Add deployment instructions
+
+## Status
+
+Active learning project. Best used as a beginner Flask portfolio example after cleanup and screenshots are added.
